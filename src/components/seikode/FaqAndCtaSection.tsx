@@ -29,7 +29,7 @@ const faqs: FaqItem[] = [
   },
   {
     q: "Como funciona o pagamento?",
-    a: "Os planos Start e Pro são pagamento único, feito via Pix ou cartão. Trabalhamos com 50% no início do projeto e 50% na entrega final. O plano Ecossistema tem o setup inicial mais a mensalidade do serviço de automação.",
+    a: "Os planos Start e Pro são pagamento único, feito via Pix ou cartão. Trabalhamos com 50% no início do projeto e 50% na entrega final. O plano Personalizado tem orçamento e condições definidos individualmente.",
   },
   {
     q: "Eu preciso enviar os textos e fotos do site?",
@@ -37,12 +37,35 @@ const faqs: FaqItem[] = [
   },
   {
     q: "E se eu quiser mudar algo depois que o site estiver no ar?",
-    a: "Pequenos ajustes (trocar telefone, adicionar um serviço, mudar uma foto) entram como cortesia nos primeiros 30 dias após a entrega. Depois disso, alterações são cobradas separadamente ou inclusas no plano Ecossistema, que tem manutenção mensal.",
+    a: "Pequenos ajustes (trocar telefone, adicionar um serviço, mudar uma foto) entram como cortesia nos primeiros 30 dias após a entrega. Depois disso, alterações são cobradas separadamente ou inclusas no plano Personalizado, que tem manutenção mensal.",
+  },
+  {
+    q: "E se eu não gostar do design final?",
+    a: "A gente faz ajustes até você aprovar. Se mesmo assim não rolar, devolvemos seu dinheiro pela garantia Risco Zero. Você não fica preso a nada.",
+  },
+  {
+    q: "Vocês já fizeram site pro meu nicho?",
+    a: "Sim. Trabalhamos com clínicas, consultórios, barbearias, salões, advocacia, estética e mais. Cada site é construído com a lógica do seu nicho específico, não é template genérico.",
+  },
+  {
+    q: "Quanto tempo até eu começar a ver cliente chegando?",
+    a: "Depende do seu tráfego. Quem já anuncia ou tem fluxo no Google sente diferença em poucos dias. Quem tá começando do zero precisa de tráfego pago ou indicação pra acelerar — a gente orienta sobre isso.",
+  },
+  {
+    q: "Eu preciso entender de tecnologia ou site pra contratar?",
+    a: "Zero. Você só manda os textos, fotos e o que quer destacar. A gente cuida de hospedagem, domínio, configuração, tudo. Você não precisa mexer em nada técnico nunca.",
+  },
+  {
+    q: "E se o site não converter? Vocês ajustam?",
+    a: "Ajustamos. Todo site nosso é entregue com pelo menos uma rodada de ajustes pós-lançamento. Nos planos com manutenção mensal, ajustes contínuos estão inclusos.",
+  },
+  {
+    q: "Por que o preço é menor que de outras agências? Vai ser pior?",
+    a: "Não. A gente cobra menos porque o processo é enxuto: sem reuniões longas, sem proposta de 30 páginas, sem equipe de 10 pessoas. Mesma qualidade, sem o desperdício. Veja os exemplos no portfólio.",
   },
 ];
 
-const WHATSAPP_URL =
-  "https://wa.me/5527998346547?text=Ol%C3%A1%2C%20gostaria%20de%20um%20diagn%C3%B3stico%20gratuito%20para%20meu%20neg%C3%B3cio.";
+const WHATSAPP_URL = `https://wa.me/5527998346547?text=${encodeURIComponent("Oi! Quero meu diagnóstico gratuito.")}`;
 
 export default function FaqAndCtaSection() {
   return (
@@ -177,12 +200,11 @@ function CtaBlock() {
 
       <div className="flex flex-col gap-4">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#fafafa" }}>
-          Pronto para deixar a{" "}
-          <span style={{ color: "#007bff" }}>concorrência para trás?</span>
+          Pronto pra parar de{" "}
+          <span style={{ color: "#007bff" }}>perder cliente?</span>
         </h2>
         <p className="mx-auto max-w-lg text-sm leading-relaxed sm:text-base" style={{ color: "#a1a1aa" }}>
-          Clique no botão abaixo, fale diretamente com nossa equipe no WhatsApp e receba um
-          diagnóstico gratuito de como podemos profissionalizar sua marca no Google.
+          Fale com a gente no WhatsApp. Diagnóstico gratuito, sem compromisso. Em poucos minutos você sabe exatamente o que precisa pra profissionalizar seu negócio.
         </p>
       </div>
 
@@ -202,7 +224,7 @@ function CtaBlock() {
         }}
       >
         <MessageCircle size={20} />
-        Falar com a Equipe no WhatsApp
+        Quero meu diagnóstico gratuito
       </motion.a>
 
       <p className="text-xs" style={{ color: "rgba(161,161,170,0.6)" }}>

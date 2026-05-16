@@ -18,15 +18,15 @@ const fadeUp = (delay = 0) => ({
 });
 
 const painPoints = [
-  "Agências tradicionais cobram caro,",
-  "para fazer reuniões inúteis,",
-  "e entregam projetos genéricos.",
+  "Seu concorrente aparece melhor no Google e leva o cliente que era seu",
+  "Você tem vergonha de mandar seu Instagram quando alguém pede seu trabalho",
+  "Você paga pra impulsionar e quase ninguém entra em contato",
 ];
 
 const solutionPoints = [
-  "Site profissional pronto em poucos dias,",
-  "Feito pra transformar visitante em cliente,",
-  "Sem reuniões intermináveis nem enrolação.",
+  "Site profissional no ar em poucos dias, sem reunião sem fim",
+  "Cada seção construída pra empurrar o cliente pro WhatsApp",
+  "Você só envia textos e fotos — a gente cuida do resto",
 ];
 
 export default function ContrastSection() {
@@ -94,8 +94,8 @@ function PainCard() {
 
       {/* Title */}
       <h2 className="text-3xl font-bold tracking-tight leading-snug" style={{ color: "#fafafa" }}>
-        O mercado é{" "}
-        <span style={{ color: "#007bff" }}>lento.</span>
+        O que tá te custando{" "}
+        <span style={{ color: "#007bff" }}>cliente todo dia</span>
       </h2>
 
       {/* Bullets */}

@@ -80,8 +80,7 @@ export default function PortfolioSection() {
             Veja o Nível das Nossas Entregas.
           </h2>
           <p className="max-w-xl text-sm leading-relaxed" style={{ color: "#a1a1aa" }}>
-            Projetos demonstrativos desenvolvidos com padrões reais de mercado para cada nicho.
-            Clique em qualquer um para navegar ao vivo.
+            Padrão de entrega por nicho. Clique em qualquer um pra navegar ao vivo.
           </p>
         </motion.div>
 

@@ -15,11 +15,13 @@ interface Plan {
   description: string;
   price: string;
   priceNote: string;
+  comparison?: string;
   features: string[];
   cta: string;
   ctaVariant: "outline" | "solid" | "dark";
   whatsappHref: string;
   highlighted?: boolean;
+  showGuarantee?: boolean;
 }
 
 const plans: Plan[] = [
@@ -27,17 +29,19 @@ const plans: Plan[] = [
     id: "start",
     title: "Start",
     description: "Para quem ainda não tem site e precisa parar de perder cliente pra quem aparece melhor no Google.",
-    price: "R$ 300",
+    price: "A partir de R$ 200",
     priceNote: "pagamento único",
+    comparison: "Em agência tradicional: R$ 2.000+ e 30 dias de espera",
     features: [
-      "Página única completa: serviços, sobre você e contato em uma rolagem",
-      "Botão de WhatsApp fixo na tela (cliente fala com você de qualquer parte do site)",
-      "Otimizada pra celular, onde 9 em cada 10 clientes vão acessar",
-      "Hospedagem e domínio configurados pra você (sem dor de cabeça técnica)",
+      "Tudo que o cliente precisa pra te contratar numa única tela",
+      "Botão de WhatsApp sempre visível pra ele falar com você na hora",
+      "Funciona perfeito no celular, onde 9 em cada 10 clientes vão entrar",
+      "Hospedagem e domínio configurados — você não precisa entender nada técnico",
     ],
-    cta: "Escolher Start",
+    cta: "Quero meu site no ar",
     ctaVariant: "outline",
-    whatsappHref: wa("Olá! Tenho interesse no plano *Start* (R$ 300 — pagamento único). Pode me dar mais detalhes?"),
+    whatsappHref: wa("Oi! Quero meu site no ar essa semana. Pode me passar os detalhes do plano Start?"),
+    showGuarantee: true,
   },
   {
     id: "pro",
@@ -45,36 +49,39 @@ const plans: Plan[] = [
     title: "Pro",
     titleColor: "#007bff",
     description: "Para quem cobra bem pelo serviço e precisa de presença digital à altura. Ideal pra clínicas, consultórios e profissionais que querem se posicionar como referência.",
-    price: "R$ 500",
+    price: "A partir de R$ 400",
     priceNote: "pagamento único",
+    comparison: "Em agência tradicional: R$ 3.500+ e 45 dias de espera",
     features: [
-      "Tudo do plano Start, mais:",
-      "Design personalizado com a identidade do seu negócio (cores, tipografia, sensação visual)",
-      "Seções extras pensadas pra converter: depoimentos, antes e depois, perguntas frequentes",
-      "Apresentação detalhada de cada serviço, com fotos e descrições",
-      "Integração com Google Maps e seu perfil do Google Meu Negócio",
+      "Tudo do plano Start",
+      "Identidade visual única, com a cara do seu negócio (não um template genérico)",
+      "Depoimentos, antes e depois e FAQ — tudo pensado pra quebrar a desconfiança do cliente",
+      "Cada serviço apresentado com foto e descrição, como se você estivesse ali atendendo",
+      "Conectado ao Google Maps e ao seu Google Meu Negócio",
     ],
-    cta: "Escolher Pro",
+    cta: "Quero me posicionar como referência",
     ctaVariant: "solid",
     highlighted: true,
-    whatsappHref: wa("Olá! Tenho interesse no plano *Pro* (R$ 500 — pagamento único). Pode me dar mais detalhes?"),
+    whatsappHref: wa("Oi! Quero me posicionar como referência no meu nicho. Me conta mais do plano Pro?"),
+    showGuarantee: true,
   },
   {
-    id: "ecosystem",
-    title: "Ecossistema",
-    description: "Para quem já tem fluxo de clientes e perde venda por não responder mensagem a tempo. O site trabalha junto com automações que atendem 24h e organizam todos os contatos.",
-    price: "R$ 1.000",
-    priceNote: "setup + R$ 300/mês",
+    id: "personalizado",
+    title: "Personalizado",
+    description: "Pra quem já tem fluxo de clientes e precisa de um sistema sob medida: site + automações de WhatsApp + integrações específicas pro seu negócio. Cada projeto é orçado individualmente.",
+    price: "Sob orçamento",
+    priceNote: "",
     features: [
-      "Tudo do plano Pro, mais:",
-      "Atendimento automático no WhatsApp: responde dúvidas comuns, agenda horários e qualifica o cliente antes de chegar em você",
-      "Funcionamento 24h, inclusive fora do horário comercial e nos fins de semana",
-      "Painel com todos os leads organizados num só lugar (nada se perde)",
-      "Manutenção mensal inclusa: ajustes, atualizações e suporte contínuo",
+      "Tudo do plano Pro",
+      "Atendimento automático no WhatsApp 24h: responde, agenda e qualifica antes de chegar em você",
+      "Funciona aos fins de semana, feriado e fora do horário — você nunca mais perde lead",
+      "Painel único com todos os contatos organizados — nada se perde",
+      "Manutenção e suporte mensal incluídos",
     ],
-    cta: "Aplicar para o Ecossistema",
+    cta: "Quero um orçamento personalizado",
     ctaVariant: "dark",
-    whatsappHref: wa("Olá! Tenho interesse no plano *Ecossistema* (R$ 1.000 setup + R$ 300/mês). Pode me dar mais detalhes?"),
+    whatsappHref: wa("Oi! Quero um orçamento personalizado pro meu negócio."),
+    showGuarantee: false,
   },
 ];
 
@@ -111,7 +118,7 @@ export default function PricingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
-          className="mb-16 flex flex-col items-center gap-4 text-center"
+          className="mb-10 flex flex-col items-center gap-4 text-center"
         >
           <h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl" style={{ color: "#fafafa" }}>
             Escolha o projeto ideal para o seu momento.
@@ -119,6 +126,30 @@ export default function PricingSection() {
           <p className="max-w-xl text-base leading-relaxed" style={{ color: "#9ca3af" }}>
             Sem taxas ocultas. Transparência total para profissionalizar seu negócio.
           </p>
+        </motion.div>
+
+        {/* Scarcity banner — BEFORE cards */}
+        <ScarcityBanner />
+
+        {/* Guarantee badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
+          className="mt-8 mb-10 flex justify-center"
+        >
+          <div
+            className="inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-semibold"
+            style={{
+              borderColor: "rgba(34,197,94,0.35)",
+              background: "rgba(34,197,94,0.06)",
+              color: "#86efac",
+            }}
+          >
+            <ShieldCheck size={16} className="flex-shrink-0 text-green-400" />
+            🛡️ GARANTIA RISCO ZERO — Se seu site não entrar no ar, devolvemos 100% do seu dinheiro.
+          </div>
         </motion.div>
 
         {/* Cards grid */}
@@ -141,9 +172,6 @@ export default function PricingSection() {
             </motion.div>
           ))}
         </motion.div>
-
-        {/* Scarcity banner */}
-        <ScarcityBanner />
       </div>
     </section>
   );
@@ -202,14 +230,21 @@ function PlanCard({ plan }: { plan: Plan }) {
       {/* Price */}
       <div className="flex flex-col gap-1">
         <span
-          className="text-4xl font-extrabold tracking-tight"
+          className="text-3xl font-extrabold tracking-tight"
           style={{ color: isHighlighted ? "#60a5fa" : "#fafafa" }}
         >
           {plan.price}
         </span>
-        <span className="text-xs" style={{ color: "#6b7280" }}>
-          {plan.priceNote}
-        </span>
+        {plan.priceNote && (
+          <span className="text-xs" style={{ color: "#6b7280" }}>
+            {plan.priceNote}
+          </span>
+        )}
+        {plan.comparison && (
+          <span className="mt-1 text-xs" style={{ color: "#6b7280" }}>
+            {plan.comparison}
+          </span>
+        )}
       </div>
 
       {/* Divider */}
@@ -245,7 +280,7 @@ function PlanCard({ plan }: { plan: Plan }) {
       {/* CTA */}
       <div className="mt-auto flex flex-col gap-3">
         <CtaButton variant={plan.ctaVariant} label={plan.cta} href={plan.whatsappHref} />
-        {plan.ctaVariant !== "dark" && (
+        {plan.showGuarantee && (
           <div className="flex items-center justify-center gap-1.5">
             <ShieldCheck size={13} className="flex-shrink-0 text-green-500" />
             <span className="text-xs" style={{ color: "#6b7280" }}>
@@ -324,9 +359,9 @@ function ScarcityBanner() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
-      className="relative mt-20 mx-auto max-w-3xl"
+      className="relative mb-0 mx-auto max-w-3xl"
     >
-      {/* Outer ambient glow — wide diffuse halo */}
+      {/* Outer ambient glow */}
       <div
         aria-hidden
         className="pointer-events-none absolute -inset-8 rounded-3xl"

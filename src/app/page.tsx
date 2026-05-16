@@ -1,5 +1,6 @@
 import HeroSection from "@/components/seikode/HeroSection";
 import ContrastSection from "@/components/seikode/ContrastSection";
+import HowItWorksSection from "@/components/seikode/HowItWorksSection";
 import PortfolioSection from "@/components/seikode/PortfolioSection";
 import PricingSection from "@/components/seikode/PricingSection";
 import FaqAndCtaSection from "@/components/seikode/FaqAndCtaSection";
@@ -17,6 +18,10 @@ export default function Home() {
 
       <section id="contraste">
         <ContrastSection />
+      </section>
+
+      <section id="como-funciona">
+        <HowItWorksSection />
       </section>
 
       <section id="portfolio">

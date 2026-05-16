@@ -4,8 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 
-const WHATSAPP_URL =
-  "https://wa.me/5527998346547?text=Ol%C3%A1%2C%20gostaria%20de%20um%20diagn%C3%B3stico%20gratuito%20para%20meu%20neg%C3%B3cio.";
+const WHATSAPP_URL = `https://wa.me/5527998346547?text=${encodeURIComponent("Oi! Quero meu site no ar essa semana. Pode me ajudar?")}`;
 
 export default function FloatingWhatsApp() {
   const [tooltipVisible, setTooltipVisible] = useState(false);

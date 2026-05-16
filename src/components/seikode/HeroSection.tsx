@@ -61,22 +61,21 @@ export default function HeroSection() {
           <ParticleTextEffect words={["SEIKODE", "CONVERSÃO", "ACELERAÇÃO"]} />
         </motion.div>
 
-        {/* Subtitle H2 */}
+        {/* Subtitle */}
         <motion.p
           variants={fadeUp}
           className="max-w-2xl text-lg leading-relaxed sm:text-xl"
           style={{ color: "#a1a1aa" }}
         >
-          Pare de perder clientes no Google Maps para concorrentes que parecem
-          mais profissionais. Criamos o seu site em{" "}
-          <strong style={{ color: "#fafafa" }}>poucos dias</strong> — direto ao
-          ponto, focado em conversão.
+          Criamos o site profissional do seu negócio em poucos dias. Pronto pra
+          converter visitante em cliente{" "}
+          <strong style={{ color: "#fafafa" }}>direto no WhatsApp.</strong>
         </motion.p>
 
         {/* CTA */}
         <motion.div variants={fadeUp}>
           <motion.a
-            href={`https://wa.me/5527998346547?text=${encodeURIComponent("Olá! Quero profissionalizar meu negócio hoje. Pode me dar mais detalhes?")}`}
+            href={`https://wa.me/5527998346547?text=${encodeURIComponent("Oi! Quero parar de perder cliente. Pode me dar mais detalhes?")}`}
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
@@ -88,7 +87,7 @@ export default function HeroSection() {
               boxShadow: "0 0 28px rgba(0,123,255,0.35)",
             }}
           >
-            Profissionalizar Meu Negócio Hoje
+            Quero parar de perder cliente
             <ArrowRight
               size={18}
               className="transition-transform duration-200 group-hover:translate-x-1"
@@ -127,7 +126,7 @@ function Badge() {
         className="relative z-10 text-xs font-semibold uppercase tracking-widest"
         style={{ color: "#007bff" }}
       >
-        Para Negócios Locais e Profissionais
+        Seu concorrente aparece melhor no Google. E tá levando seus clientes.
       </span>
     </div>
   );
