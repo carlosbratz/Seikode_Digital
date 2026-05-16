@@ -12,7 +12,7 @@ export function Nav() {
             className="pointer-events-none absolute inset-0 -z-10 rounded-full bg-gold/30 blur-2xl"
           />
           <img
-            src={logo}
+            src={logo.src}
             alt="SEIKODE"
             className="h-[50px] w-auto max-h-[50px] object-contain drop-shadow-[0_0_20px_color-mix(in_oklab,var(--gold)_60%,transparent)]"
           />
