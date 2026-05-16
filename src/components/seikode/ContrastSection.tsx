@@ -25,7 +25,7 @@ const painPoints = [
 
 const solutionPoints = [
   "Site profissional no ar em poucos dias, sem reunião sem fim",
-  "Cada seção construída pra empurrar o cliente pro WhatsApp",
+  "Cada seção construída pra empurrar o cliente pro WhatsApp já com a intenção de compra",
   "Você só envia textos e fotos — a gente cuida do resto",
 ];
 
