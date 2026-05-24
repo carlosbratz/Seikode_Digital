@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚡ Landing Page de Alta Conversão (Click-to-WhatsApp)
 
-## Getting Started
+> **Status do Projeto:** Concluído ✔️
 
-First, run the development server:
+## 🎯 O Problema
+Sites institucionais tradicionais costumam ter muita informação, o que distrai o usuário e reduz a taxa de conversão de campanhas pagas (Tráfego Pago). Além disso, o desenvolvimento de páginas focadas em performance costuma levar semanas, atrasando o teste de novas ofertas.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 💡 A Solução e Arquitetura do Funil
+Desenvolvimento de uma Landing Page estruturada para **CRO (Otimização da Taxa de Conversão)**, com um único objetivo central: direcionar o lead qualificado diretamente para o WhatsApp da empresa. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**O Funil Integrado:**
+1. O lead acessa a página (via tráfego orgânico ou pago).
+2. É impactado por uma Copy persuasiva e design focado na dor do cliente.
+3. Clica no CTA (Call to Action) e é redirecionado ao WhatsApp com uma mensagem pré-definida.
+4. **Conexão:** A partir daqui, o atendimento pode ser assumido pelo meu [Agente de IA no n8n](LINK_DO_SEU_REPOSITORIO_DO_AGENTE_AQUI), automatizando 100% da captação.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🤖 Desenvolvimento Acelerado com IA (Prompt Engineering)
+Este projeto foi desenvolvido utilizando uma abordagem de **AI-Assisted Coding**. Em vez de digitar cada bloco de HTML/CSS do zero, utilizei IA Generativa para acelerar a prototipação e focar na arquitetura de conversão.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Atuação como Engenheiro de Prompts:**
+* **Geração de Copy:** Criação de prompts focados em frameworks de copywriting (AIDA / PAS) para gerar os textos da página.
+* **Estruturação Semântica:** Prompts técnicos exigindo HTML5 semântico e estruturação em blocos (Hero Section, Benefícios, FAQ, CTA).
+* **Estilização e Responsividade:** Instruções específicas para a geração de um CSS limpo e 100% responsivo (Mobile-First), garantindo carregamento rápido.
 
-## Learn More
+## 🛠️ Tecnologias Utilizadas
+* **HTML5 & CSS3** (Estrutura e Estilização)
+* **Engenharia de Prompts / IA Generativa** (Aceleração de Código e Copywriting)
+* **Arquitetura de Funil (ToFu)** (Estratégia de Captação)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📁 Visualização
+Os arquivos fonte (`index.html`, `style.css`) estão disponíveis neste repositório.
